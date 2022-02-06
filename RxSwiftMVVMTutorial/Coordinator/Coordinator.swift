@@ -8,7 +8,7 @@ class Coordinator {
     }
     
     func start() {
-        let rootViewController = RootViewController()
+        let rootViewController = RootViewController(viewModel: RootViewModel(articleService: ArticleService()))
         let navigationVC = UINavigationController(rootViewController: rootViewController)
         window.rootViewController = navigationVC
         window.makeKeyAndVisible()
